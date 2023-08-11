@@ -61,9 +61,3 @@ class LogisticRegression(BaseEstimator):
             self.w0 -= der_w0 * self.step 
 
         return self
-
-
-
-
-
-

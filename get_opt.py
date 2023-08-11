@@ -3,6 +3,9 @@ from log_res import LogisticRegression
 from sklearn.datasets import make_classification
 from sklearn.model_selection import cross_val_score
 
+
+# made by examples from https://github.com/optuna/optuna-examples/blob/main/sklearn/sklearn_simple.py 
+
 LR_PARAMS_DICT = {
     'C': 0.,
     'random_state': 777,
