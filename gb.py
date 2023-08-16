@@ -1,12 +1,9 @@
 import numpy as np
 from sklearn.base import BaseEstimator
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, roc_auc_score
-
 
 
 TREE_PARAMS_DICT = {'max_depth': 7}
@@ -32,8 +29,8 @@ class GradientBoostingClassifier(BaseEstimator):
             # f(a) = 1 / (1 + exp(-a)) - преобразование в вероятность
             # f'(a) = - exp(a) / (1 + exp(-a))^2 = - f(a) (1 - f(a))
             # log loss это (y log f(a) + (1 - y) log(1 - f(a)))
-
             # d/da (y log f(a) + (1 - y) log(1 - f(a))) = f'(a) (y/f(a) - (1 - y) / (1 - f(a)))
+
             fa = 1. / (1 + np.exp(-curr_pred))
             grad = - fa * (1. - fa) * (y / fa - (1. - y) / (1. - fa))
 
