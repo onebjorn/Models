@@ -1,7 +1,7 @@
 # Build the linear part of forward propagation.
 
 import numpy as np
-from dnn_utils import sigmoid, relu
+from .dnn_utils import sigmoid, relu
 
 
 def linear_forward(A, W, b):

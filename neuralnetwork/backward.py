@@ -1,5 +1,5 @@
 import numpy as np
-from dnn_utils import sigmoid_backward, relu_backward
+from .dnn_utils import sigmoid_backward, relu_backward
 
 
 def linear_backward(dZ, cache):

@@ -2,10 +2,10 @@ import numpy as np
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, roc_auc_score
-from params import initialize_parameters, update_parameters
-from costs import compute_cost
-from forward import L_model_forward
-from backward import L_model_backward
+from .params import initialize_parameters, update_parameters
+from .costs import compute_cost
+from .forward import L_model_forward
+from .backward import L_model_backward
 
 
 class NeuralNetwork():
